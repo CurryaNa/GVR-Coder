@@ -13,16 +13,14 @@ framework:
 - SVG verification and targeted repair; and
 - a small, anonymized sample of the DocMeetSVG data.
 
-> This is an anonymized research release. Model checkpoints, full training
-> data, private prompts/configurations, and internal infrastructure are not
-> included. Paths, model identifiers, and prompt keys in the code are
-> placeholders and must be configured before use.
+> Paths, model identifiers, prompt keys, and environment-specific settings in
+> the code are placeholders and must be configured before use. The complete
+> dataset and model weights are coming soon.
 
 ## Repository layout
 
 ```text
 .
-├── Supplement Material.pdf
 ├── data/
 │   └── DocMeetSVG_sample.jsonl
 └── gvr-coder_code/
@@ -41,8 +39,8 @@ framework:
         └── plugin.py
 ```
 
-`Supplement Material.pdf` contains the data-collection details, prompt
-templates, human-evaluation protocol, and additional experimental results.
+For data-collection details, prompt templates, human-evaluation protocol, and
+additional experimental results, please refer to the paper.
 
 ## Sample data
 
@@ -210,6 +208,11 @@ The resulting JSON can be rendered and passed back to `verify.py`. Repeat the
 loop until the desired acceptance criterion or iteration limit is reached.
 The shell wrappers under `gvr_agent/scripts/` provide an example of automating
 three repair rounds; set their `BASE_DIR` placeholders before use.
+
+```bash
+cd gvr-coder_code
+bash gvr_agent/scripts/run_all.sh
+```
 
 ## Notes
 

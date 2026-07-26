@@ -95,6 +95,17 @@ matched to the target hardware and cluster environment.
 
 ## Training
 
+### Implementation details
+
+We evaluate GVR-Coder on representative model architectures, including
+Qwen3-14B and Qwen3-32B, using full-parameter fine-tuning. Supervised training
+is conducted on 32 NVIDIA A100 GPUs with a global batch size of 32. During the
+reinforcement-learning stage, we use GRPO to train the SFT model through
+vLLM's colocate integration mode with a global batch size of 256. All reward
+coefficients in the RL stage are set to 1. The complete training pipeline is
+implemented with the [ms-swift](https://github.com/modelscope/ms-swift)
+framework.
+
 ### Curriculum fine-tuning
 
 `gvr-coder_code/train_scripts/cul_rsft.sh` performs three sequential SFT

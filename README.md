@@ -4,6 +4,9 @@ Official supplementary code and sample data for **GVR-Coder: A Visual-Feedback
 Framework for Structured SVG Generation in Complex Document and Meeting
 Scenarios**.
 
+> **Extended version:** The extended version of our paper is available on
+> [arXiv](https://arxiv.org/abs/2607.28073).
+
 GVR-Coder targets text-to-SVG generation for information-dense documents and
 meeting scenarios. The released material covers the main components of the
 framework:

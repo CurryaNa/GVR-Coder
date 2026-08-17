@@ -7,6 +7,12 @@ Scenarios**.
 > **Extended version:** The extended version of our paper is available on
 > [arXiv](https://arxiv.org/abs/2607.28073).
 
+## Framework overview
+
+[![Overview of the GVR-Coder framework](assets/gvr-coder-framework.png)](frame-GVRCoder3.pdf)
+
+*Overview of GVR-Coder. Click the figure to view the high-resolution PDF.*
+
 GVR-Coder targets text-to-SVG generation for information-dense documents and
 meeting scenarios. The released material covers the main components of the
 framework:
@@ -24,8 +30,11 @@ framework:
 
 ```text
 .
+├── assets/
+│   └── gvr-coder-framework.png
 ├── data/
 │   └── DocMeetSVG_sample.jsonl
+├── frame-GVRCoder3.pdf
 └── gvr-coder_code/
     ├── gvr_agent/
     │   ├── verify.py
